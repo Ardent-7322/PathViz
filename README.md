@@ -1,6 +1,6 @@
 # PathViz
 
-Welcome to PathViz! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope you enjoy playing around with this visualization tool as much as I enjoyed building it. You can access it here (use Google Chrome!): [PathViz](https://github.com/Ardent-7322/PathViz/tree/master).
+Welcome to PathViz! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope you enjoy playing around with this visualization tool as much as I enjoyed building it. You can access it here (use Google Chrome!): [PathViz] (https://github.com/Ardent-7322/PathViz/tree/master).
 
 ## Meet the Algorithms
 
