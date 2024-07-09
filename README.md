@@ -1,29 +1,51 @@
-# Pathfinding Visualizer
+# PathViz
 
-Welcome to Pathfinding Visualizer! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope that you enjoy playing around with this visualization tool just as much as I enjoyed building it. You can access it here (use Google Chrome!): https://clementmihailescu.github.io/Pathfinding-Visualizer/
+Welcome to PathViz! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope you enjoy playing around with this visualization tool as much as I enjoyed building it. You can access it here (use Google Chrome!): [PathViz](https://github.com/Ardent-7322/PathViz/tree/master).
 
 ## Meet the Algorithms
 
-This application supports the following algorithms: 
+This application supports the following algorithms:
 
-**Dijkstra's Algorithm** (weighted): the father of pathfinding algorithms; guarantees the shortest path
+### Dijkstra's Algorithm (weighted)
+- **For Everyone:** Think of Dijkstra's Algorithm as the ultimate GPS. It always finds the shortest route from your starting point to your destination.
+- **Technical Details:** It guarantees the shortest path by exploring all possible routes in a weighted graph where each edge has a cost.
 
-**A* Search** (weighted): arguably the best pathfinding algorithm; uses heuristics to guarantee the shortest path much faster than Dijkstra's Algorithm
+### A* Search (weighted)
+- **For Everyone:** A* Search is like a GPS with a sense of direction. It finds the shortest path faster by guessing which routes might be quicker.
+- **Technical Details:** It uses heuristics (educated guesses) to speed up the process, combining the cost to get to the node and an estimate of the cost to get to the destination.
 
-**Greedy Best-first Search** (weighted): a faster, more heuristic-heavy version of A*; does not guarantee the shortest path
+### Greedy Best-first Search (weighted)
+- **For Everyone:** This algorithm is like a person who always takes the road that looks the most promising without considering if it’s the best overall route.
+- **Technical Details:** It prioritizes nodes that seem to lead directly to the target, based on heuristics, but it doesn’t guarantee the shortest path.
 
-**Swarm Algorithm** (weighted): a mixture of Dijkstra's Algorithm and A*; does not guarantee the shortest-path
+### Swarm Algorithm (weighted)
+- **For Everyone:** Imagine a group of ants spreading out from the start and converging towards the food source. That’s how the Swarm Algorithm works.
+- **Technical Details:** It mixes Dijkstra's thoroughness with A*’s heuristic approach, exploring around the start and converging towards the target without guaranteeing the shortest path.
 
-**Convergent Swarm Algorithm** (weighted): the faster, more heuristic-heavy version of Swarm; does not guarantee the shortest path
+### Convergent Swarm Algorithm (weighted)
+- **For Everyone:** Similar to the Swarm Algorithm, but it moves even faster by heavily relying on guesses about the best routes.
+- **Technical Details:** It’s a more heuristic-heavy version of the Swarm Algorithm, trading some accuracy for speed.
 
-**Bidirectional Swarm Algorithm** (weighted): Swarm from both sides; does not guarantee the shortest path
+### Bidirectional Swarm Algorithm (weighted)
+- **For Everyone:** Imagine ants starting from both the start and the food source, meeting in the middle. That’s the Bidirectional Swarm.
+- **Technical Details:** It applies the Swarm Algorithm from both ends, speeding up the process but not guaranteeing the shortest path.
 
-**Breath-first Search** (unweighted): a great algorithm; guarantees the shortest path
+### Breadth-first Search (unweighted)
+- **For Everyone:** This method checks all possible routes layer by layer. Think of it as exploring all streets in a neighborhood before moving to the next layer.
+- **Technical Details:** It guarantees the shortest path in an unweighted graph by exploring all nodes at the present "depth" before moving on to nodes at the next depth level.
 
-**Depth-first Search** (unweighted): a very bad algorithm for pathfinding; does not guarantee the shortest path
+### Depth-first Search (unweighted)
+- **For Everyone:** This is like someone who picks a path and follows it until they hit a dead end, then backtracks to try another path.
+- **Technical Details:** It explores as far as possible along each branch before backtracking, which doesn’t guarantee the shortest path and can be inefficient for pathfinding.
 
-On top of the pathfinding algorithms listed above, I implemented a **Recursive Division** Maze Generation algorithm.
+## Maze Generation
+
+In addition to pathfinding algorithms, I implemented a **Recursive Division** Maze Generation algorithm:
+- **For Everyone:** This method creates a maze by repeatedly splitting areas into smaller sections with walls, similar to how you might divide a room using partitions.
+- **Technical Details:** It works by recursively splitting the grid and adding walls with gaps, creating a complex maze structure.
 
 ## More about the Swarm Algorithm
 
-The Swarm Algorithm is an algorithm that I - at least presumably so (I was unable to find anything close to it online) - co-developed with a good friend and colleague, Hussein Farah. The algorithm is essentially a mixture of Dijkstra's Algorithm and A* Search; more precisely, while it converges to the target node like A* , it still explores quite a few neighboring nodes surrounding the start node like Dijkstra's. The algorithm differentiates itself from A* through its use of heuristics: it continually updates nodes' distance from the start node while taking into account their estimated distance from the target node. This effectively "balances" the difference in total distance between nodes closer to the start node and nodes closer to the target node, which results in the triangle-like shape of the Swarm Algorithm. We named the algorithm "Swarm" because one of its potential applications could be seen in a video-game where a character must keep track of a boss with high priority (the target node), all the while keeping tracking of neighboring enemies that might be swarming nearby. 
+The Swarm Algorithm is a unique method co-developed with my colleague, Hussein Farah. It blends Dijkstra's methodical exploration with A*'s heuristic guidance:
+- **For Everyone:** It balances exploring nearby areas and moving towards the goal, much like a character in a video game tracking a boss while keeping an eye on nearby enemies.
+- **Technical Details:** The algorithm updates nodes' distances from the start while considering their estimated distance to the target, forming a triangle-like search pattern. We named it "Swarm" due to its potential application in video games for managing multiple targets and threats.
