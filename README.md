@@ -44,8 +44,3 @@ In addition to pathfinding algorithms, I implemented a **Recursive Division** Ma
 - **For Everyone:** This method creates a maze by repeatedly splitting areas into smaller sections with walls, similar to how you might divide a room using partitions.
 - **Technical Details:** It works by recursively splitting the grid and adding walls with gaps, creating a complex maze structure.
 
-## More about the Swarm Algorithm
-
-The Swarm Algorithm is a unique method co-developed with my colleague, Hussein Farah. It blends Dijkstra's methodical exploration with A*'s heuristic guidance:
-- **For Everyone:** It balances exploring nearby areas and moving towards the goal, much like a character in a video game tracking a boss while keeping an eye on nearby enemies.
-- **Technical Details:** The algorithm updates nodes' distances from the start while considering their estimated distance to the target, forming a triangle-like search pattern. We named it "Swarm" due to its potential application in video games for managing multiple targets and threats.
